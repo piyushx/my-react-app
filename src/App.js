@@ -4,13 +4,8 @@ import NavBar from './components/NavBar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react'
 import Alerts from './components/alert';
-import About from './components/About'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+
+
 
 
 function App() {
@@ -50,20 +45,11 @@ function App() {
   }
 
   return (
-  <Router>
+    <>
      < NavBar title = "My react App!" mode = {mode} color = {white} ChangeColor = {ChangeColor} toggleMode ={toggleMode} />
-     <Alerts Alertme = {Alert}/>
-    <Switch>
-          <Route path="/about">
-               <About mode = {mode} />
-          </Route>
-
-          <Route path="/">
-              < TextForm mode = {mode} color = {white} Alertme = {Alert} AlertFunction = {showAlert} />
-          </Route>
-    </Switch>
-  </Router>
-
+     <Alerts Alertme = {Alert} />
+    < TextForm mode = {mode} color = {white} Alertme = {Alert} AlertFunction = {showAlert} />
+    </>
   );
 }
 

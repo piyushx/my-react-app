@@ -6,17 +6,17 @@ const NavBar=(props)=>
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode}`} style={{backgroundColor: `${props.mode==="light"?"#e3f2fd":"black"}`}}>
     <div className="container-fluid">
-      <Link className="navbar-brand" to = "/home" > {props.title}</Link>
+      <a className="navbar-brand" href = "#" > {props.title}</a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"/>
        
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                <Link to ="/home" className="nav-link active"  >Home</Link>
+                <a href ="#" className="nav-link active"  >Home</a>
                 </li>
                 <li className="nav-item">
-                <Link to ="/about" className="nav-link">About</Link>
+                <a href ="#" className="nav-link">About</a>
                 </li>
             </ul>
             
